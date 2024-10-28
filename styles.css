@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+main {
+    padding: 72px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #007bff;
+}
+
+.quiz-app {
+    background-color: white;
+    min-width: 100%;
+    max-width: 600px;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 3px 5px rgba(100, 172, 220, 0.618);
+    margin: 0 20px;
+}
+
+.quiz-header {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 3px 5px rgba(100, 172, 220, 0.618);
+}
+
+.quiz-header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.quiz-title {
+    font-size: 20px;
+}
+
+.quiz-timer {
+    font-size: 14px;
+    padding: 8px 10px;
+    background: #cce5fe;
+    border-radius: 4px;
+    color: #728bad;
+}
+
+.time-left-value {
+    background-color: #32363a;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+.quiz-progress {
+    height: 4px;
+    background-color: #298cf2;
+    width: 100%;
+    transition: width 0.5s ease-in-out; 
+}
+
+.quiz-question-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow: auto;
+}
+
+.quiz-question {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.quiz-option {
+    background-color: #eff8ff;
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #c1d9ef;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.quiz-option:hover {
+    background-color: aquamarine;
+}
+
+.quiz-option:active {
+    background-color: aqua;
+}
+
+.quiz-option-text {
+    flex: 1;
+}
+
+.quiz-option-image {
+    height: 25px;
+}
+
+.quiz-option.correct {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.quiz-option.incorrect {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+.hr {
+    width: 100%;
+    border: 1px solid #eaeaea;
+}
+
+.quiz-question-details {
+    font-size: 14px;
+    padding: 16px 20px;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .quiz-app {
+        width: 90%;
+        min-width: auto;
+    }
+    .quiz-title {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 20px;
+    }
+    .quiz-header-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .quiz-title {
+        font-size: 16px;
+    }
+    .quiz-timer {
+        font-size: 12px;
+    }
+    .time-left-value {
+        font-size: 12px;
+        padding: 2px 6px;
+    }
+    .quiz-option {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+/* Result box styling */
+.result-box {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 20px;
+    background-color: #eff8ff;
+    border: 1px solid #c1d9ef;
+    border-radius: 4px;
+    min-height: 200px;
+    width: 100%;
+    box-shadow: 0px 3px 5px rgba(100, 172, 220, 0.618);
+    overflow-y: auto;
+    max-height: 400px;
+}
+
+.null {
+    background-color: #d4edda;
+    color: red;
+}
+
+.footer {
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    margin: 6px 0;
+}
+
+.btn {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 12px;
+    font-weight: 700;
+}
+
+/* Timer container and controls */
+.timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.timer-label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+#timer-select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100px;
+    text-align: center;
+    transition: border-color 0.3s;
+}
+
+.timer-select:hover {
+    border-color: #007bff;
+}
+
+.start-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.start-button img {
+    width: 50px;
+}
+
+.start-button:active {
+    background-color: #004085;
+}
