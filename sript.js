@@ -1,5 +1,5 @@
 import { quizQuestions } from "./questions.js";
-
+// comment
 const questionContainer = document.querySelector('.quiz-question-container');
 const displaytimevalue = document.querySelector('.time-left-value');
 const displayTime=document.querySelector('.quiz-timer');
